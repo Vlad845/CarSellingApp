@@ -10,5 +10,6 @@
 (contact seller)>(LogIn)
 (Search for cars using filters)>(LogIn)
 (Post public reviews of other users)>(LogIn)
+(LogIn)<(Fail 5 times,blocked 24h)
 [Admin]-(Delete offensive or inapropiate content)
 [Admin]-(Block Invalid Users)
