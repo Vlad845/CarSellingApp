@@ -24,7 +24,6 @@ public class main extends Application {
         primaryStage.setTitle("CarSellingApp");
         primaryStage.initStyle(StageStyle.DECORATED);
         primaryStage.setScene(new Scene(root, 737, 524));
-       // primaryStage.getIcons().add(new Image("rellow.jpg"));
         primaryStage.setResizable(false);
 
         primaryStage.show();
