@@ -5,11 +5,13 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import services.UserService;
 
 
 import java.awt.*;
 
 public class main extends Application {
+
 
     public static void main(String[] args) {
         launch(args);
@@ -19,7 +21,7 @@ public class main extends Application {
     public void start(Stage primaryStage) throws Exception {
 
 
-
+        UserService.loadUsersFromFile();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Login.fxml"));
         primaryStage.setTitle("CarSellingApp");
         primaryStage.initStyle(StageStyle.DECORATED);
