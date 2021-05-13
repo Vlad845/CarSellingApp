@@ -3,8 +3,12 @@ package Controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -17,7 +21,16 @@ public class MainPageSellerController {
     private Button createPost;
 
     @FXML
-    void createPostAction(ActionEvent event) {
+    void createPostAction(ActionEvent event) throws IOException {
+
+        Parent AnnouncementFormat = FXMLLoader.load(getClass().getResource("/PostAnnouncement.fxml"));
+        Scene AnnouncementFormatScene = new Scene(AnnouncementFormat);
+
+        //Here we get the stage information
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.setScene(AnnouncementFormatScene);
+        window.show();
 
     }
     @FXML
@@ -36,5 +49,17 @@ public class MainPageSellerController {
         MainPagePane.setCenter(borderPane);
 
     }
+
+   /* public void ChangeScreenButtonPushed(ActionEvent event) throws  IOException{
+
+        Parent AnnouncementFormat = FXMLLoader.load(getClass().getResource("PostAnnouncement.fxml"));
+        Scene AnnouncementFormatScene = new Scene(AnnouncementFormat);
+
+        //Here we get the stage information
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.setScene(AnnouncementFormatScene);
+        window.show();
+    }*/
 
 }
