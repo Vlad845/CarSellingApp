@@ -66,6 +66,20 @@ public class UserService {
             throw new CouldNotWriteUsersException();
         }
     }
+    public static String checkOwnerOrClient(String username,String password){
+
+        String encodedPass = encodePassword(username,password);
+        for(User user : users){
+            if (username.equals(user.getUsername()) && encodedPass.equals(user.getPassword())){
+                return user.getRole();
+
+            }
+
+        }
+
+        return "not";
+
+    }
 
     private static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();

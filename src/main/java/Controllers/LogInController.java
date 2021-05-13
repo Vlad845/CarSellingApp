@@ -37,7 +37,14 @@ public class LogInController implements Initializable {
         if(UserService.check(logintext.getText(), passwordtext.getText()))
         {
             FXMLLoader fxmlLoader1 = new FXMLLoader();
-            fxmlLoader1.setLocation(getClass().getResource("/MainPageBuyer.fxml"));
+            String role=UserService.checkOwnerOrClient(logintext.getText(),passwordtext.getText());
+            if(role.equals("Buyer")) {
+                fxmlLoader1.setLocation(getClass().getResource("/MainPageBuyer.fxml"));
+            }
+            else if(role.equals("Seller"))
+            {
+                fxmlLoader1.setLocation(getClass().getResource("/MainPageSeller.fxml"));
+            }
 
             Scene scene = new Scene((Parent) fxmlLoader1.load(),1635,933);
             Stage stage1 = new Stage();
@@ -49,8 +56,6 @@ public class LogInController implements Initializable {
 
             Stage stage = (Stage) loginbutton.getScene().getWindow();
             stage.close();
-
-
 
         }
 
