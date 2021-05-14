@@ -36,9 +36,9 @@ public class AnnouncementService {
 
     }
 
-    public static void addAnnouncement(String b, String c, String e,String m,String hp, String yf, String d)  {
+    public static void addAnnouncement(String b, String c, String e,String m,String hp, String yf, String d,String p,String email)  {
 
-        announcements.add(new Announcement(b, c, e,m,hp,yf,d));
+        announcements.add(new Announcement(b, c, e,m,hp,yf,d,p,email));
         persistAnnouncement();
     }
 

@@ -9,12 +9,14 @@ public class Announcement {
     private String HorsePower;
     private String YearOfFabrication;
     private String Details;
+    private String Phone;
+    private String Email;
 
     public Announcement(){
 
     }
 
-    public Announcement(String b, String c, String e, String m, String hp, String yf, String d){
+    public Announcement(String b, String c, String e, String m, String hp, String yf, String d,String p, String em){
         this.Brand=b;
         this.Color=c;
         this.Engine=e;
@@ -22,6 +24,8 @@ public class Announcement {
         this.HorsePower=hp;
         this.YearOfFabrication=yf;
         this.Details=d;
+        this.Phone=p;
+        this.Email=em;
     }
 
 
@@ -79,5 +83,21 @@ public class Announcement {
 
     public void setDetails(String details) {
         Details = details;
+    }
+
+    public String getPhone() {
+        return Phone;
+    }
+
+    public void setPhone(String phone) {
+        Phone = phone;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
     }
 }
