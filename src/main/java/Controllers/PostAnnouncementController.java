@@ -1,5 +1,7 @@
 package Controllers;
 
+import exceptions.CouldNotWriteAnnouncementException;
+import exceptions.UsernameAlreadyExistsException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -10,7 +12,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import services.AnnouncementService;
+import services.UserService;
 
+import javax.xml.soap.Text;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 
@@ -62,6 +67,15 @@ public class PostAnnouncementController {
     private Button ReturnButton;
 
     @FXML
+    private TextField MobilePhoneTxt;
+
+    @FXML
+    private TextField EmailTxt;
+
+    @FXML
+    private Text ContacInfoText;
+
+    @FXML
     void BrandTxtAction(ActionEvent event) {
 
     }
@@ -70,6 +84,12 @@ public class PostAnnouncementController {
     void ColorTxtAction(ActionEvent event) {
 
     }
+
+    @FXML
+    void EmailTxtAction(ActionEvent event) {
+
+    }
+
 
     @FXML
     void EngineTxtAction(ActionEvent event) {
@@ -87,7 +107,17 @@ public class PostAnnouncementController {
     }
 
     @FXML
+    void MobilePhoneTxtAction(ActionEvent event) {
+
+    }
+
+    @FXML
     void PostButtonAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void ReturnToPrevious(ActionEvent event) {
 
     }
 
@@ -114,7 +144,20 @@ public class PostAnnouncementController {
     public void YearOfFabricationTxtAction(javafx.event.ActionEvent actionEvent) {
     }
 
+    public void MobilePhoneTxtAction(javafx.event.ActionEvent actionEvent) {
+    }
+
+    public void EmailTxtAction(javafx.event.ActionEvent actionEvent) {
+    }
+
     public void PostButtonAction(javafx.event.ActionEvent actionEvent) {
+        try {
+            AnnouncementService.addAnnouncement(BrandTxt.getText(), ColorTxt.getText(), EngineTxt.getText(),MileageTxt.getText(),HorsePowerTxt.getText(),
+                    YearOfFabricationTxt.getText(),ExtraDetailsTxt.getText(),MobilePhoneTxt.getText(),EmailTxt.getText());
+            //registrationMessage.setText("Account created successfully!");
+        } catch (CouldNotWriteAnnouncementException e) {
+            //registrationMessage.setText(e.getMessage());
+        }
     }
 
 
@@ -130,4 +173,8 @@ public class PostAnnouncementController {
         window.show();
 
     }
+
+
+
+
 }
