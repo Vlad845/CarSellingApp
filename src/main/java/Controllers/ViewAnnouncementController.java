@@ -78,6 +78,6 @@ public class ViewAnnouncementController {
 
     public void ShowButtonAction(javafx.event.ActionEvent actionEvent) {
 
-        
+
     }
 }
