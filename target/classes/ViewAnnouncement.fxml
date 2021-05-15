@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox styleClass="bodybg1" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ViewAnnouncementController">
+    <children>
+        <HBox>
+            <children>
+                <AnchorPane prefHeight="347.0" prefWidth="1000.0">
+                    <children>
+                        <Button fx:id="ReturnButton" layoutX="716.0" layoutY="351.0" mnemonicParsing="false" onAction="#ReturnButtonAction" prefHeight="78.0" prefWidth="151.0" style="-fx-background-color: #0598ff;" text="Return" textFill="#fffdfd" AnchorPane.bottomAnchor="48.0">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="AnnouncementTXT" prefHeight="64.0" prefWidth="388.0" text="        My Announcements" textFill="#0598ffed">
+                            <font>
+                                <Font name="System Bold" size="29.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="DeleteButton" layoutX="716.0" layoutY="147.0" mnemonicParsing="false" onAction="#DeleteButtonAction" prefHeight="78.0" prefWidth="151.0" style="-fx-background-color: #0598ff;" text="Delete" textFill="WHITE" AnchorPane.bottomAnchor="206.0" AnchorPane.topAnchor="147.0">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="ShowButton" layoutY="39.0" mnemonicParsing="false" onAction="#ShowButtonAction" style="-fx-background-color: #0598ff;" text="Show" textFill="WHITE" />
+                  <ScrollPane layoutY="71.0" prefHeight="360.0" prefWidth="493.0">
+                     <content>
+                        <VBox fx:id="VboxView" prefHeight="361.0" prefWidth="491.0" />
+                     </content>
+                  </ScrollPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </HBox>
+    </children>
+</VBox>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="412.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ViewController">
+   <children>
+      <Text fx:id="BrandTxt" layoutX="41.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brand" wrappingWidth="51.13671875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="ColorTxt" layoutX="41.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Color" wrappingWidth="51.13671875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="EngineTxt" layoutX="41.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Engine" wrappingWidth="51.13671875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="MileageTxt" layoutX="41.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mileage" wrappingWidth="66.13671875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="HorsePowerTxt" layoutX="41.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Power" wrappingWidth="66.13671875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="YearTxt" layoutX="41.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year Of Fabrication" wrappingWidth="82.13671875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Label fx:id="BrandLabel" layoutX="187.0" layoutY="39.0" prefHeight="17.0" prefWidth="176.0" text="Label" />
+      <Label fx:id="ColorLabel" layoutX="187.0" layoutY="67.0" prefHeight="17.0" prefWidth="176.0" text="Label" />
+      <Label fx:id="EngineLabel" layoutX="187.0" layoutY="97.0" prefHeight="17.0" prefWidth="176.0" text="Label" />
+      <Label fx:id="MileageLabel" layoutX="187.0" layoutY="127.0" prefHeight="17.0" prefWidth="176.0" text="Label" />
+      <Label fx:id="HorsePowerLabel" layoutX="187.0" layoutY="166.0" prefHeight="17.0" prefWidth="176.0" text="Label" />
+      <Label fx:id="YearLabel" layoutX="187.0" layoutY="217.0" prefHeight="17.0" prefWidth="176.0" text="Label" />
+   </children>
+</AnchorPane>
