@@ -21,6 +21,23 @@ public class MainPageSellerController {
     private Button createPost;
 
     @FXML
+    private Button View;
+
+    @FXML
+    void ViewAction(ActionEvent event) throws IOException {
+
+        Parent View = FXMLLoader.load(getClass().getResource("/ViewAnnouncement.fxml"));
+        Scene ViewScene = new Scene(View);
+
+        //Here we get the stage information
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.setScene(ViewScene);
+        window.show();
+
+    }
+
+    @FXML
     void createPostAction(ActionEvent event) throws IOException {
 
         Parent AnnouncementFormat = FXMLLoader.load(getClass().getResource("/PostAnnouncement.fxml"));

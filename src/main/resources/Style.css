@@ -1,0 +1,9 @@
+.bodybg{
+    -fx-background-image: url('ScuderriaFerrari.jpg');
+    -fx-background-size: cover;
+}
+
+.bodybg1{
+    -fx-background-image: url('Lambo.jpg');
+    -fx-background-size: cover;
+}
