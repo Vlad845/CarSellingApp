@@ -7,19 +7,21 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import model.Announcement;
 import services.AnnouncementService;
+
 
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 
 public class ViewAnnouncementController {
-
-    @FXML
-    private ListView<String> ListView;
 
     @FXML
     private Button ReturnButton;
@@ -30,22 +32,18 @@ public class ViewAnnouncementController {
     @FXML
     private Button DeleteButton;
 
-    @FXML
-    private Button EditButton;
 
     @FXML
     private Button ShowButton;
 
+    @FXML
+    private VBox VboxView;
 
     @FXML
     void DeleteButtonAction(ActionEvent event) {
 
     }
 
-    @FXML
-    void EditButtonAction(ActionEvent event) {
-
-    }
 
     @FXML
     void ReturnButtonAction(ActionEvent event) {
@@ -70,6 +68,7 @@ public class ViewAnnouncementController {
 
     }
 
+
     public void DeleteButtonAction(javafx.event.ActionEvent actionEvent) {
     }
 
@@ -78,6 +77,39 @@ public class ViewAnnouncementController {
 
     public void ShowButtonAction(javafx.event.ActionEvent actionEvent) {
 
+        VboxView.getChildren().clear();
 
+        for (Announcement x : AnnouncementService.announcements) {
+
+
+
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("/View.fxml"));
+
+
+                try {
+
+
+                    AnchorPane pane = fxmlLoader.load();
+                    ViewController ap = fxmlLoader.getController();
+                    ap.set(x.getBrand(), x.getColor(), x.getEngine(), x.getYearOfFabrication(),x.getMileage(), x.getHorsePower());
+
+                    VboxView.getChildren().add(pane);
+
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+
+
+        }
     }
+
+
+
 }
+
+

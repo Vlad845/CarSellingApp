@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.User;
 import services.AnnouncementService;
 import services.UserService;
 
@@ -151,6 +152,7 @@ public class PostAnnouncementController {
     }
 
     public void PostButtonAction(javafx.event.ActionEvent actionEvent) {
+
         try {
             AnnouncementService.addAnnouncement(BrandTxt.getText(), ColorTxt.getText(), EngineTxt.getText(),MileageTxt.getText(),HorsePowerTxt.getText(),
                     YearOfFabricationTxt.getText(),ExtraDetailsTxt.getText(),MobilePhoneTxt.getText(),EmailTxt.getText());
