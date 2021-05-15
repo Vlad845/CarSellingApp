@@ -6,6 +6,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import services.AnnouncementService;
+import services.BuyedService;
 import services.UserService;
 
 
@@ -24,6 +25,7 @@ public class main extends Application {
 
         UserService.loadUsersFromFile();
         AnnouncementService.loadAnnouncementsFromFile();
+        BuyedService.loadAnnouncementsFromFile();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Login.fxml"));
         primaryStage.setTitle("CarSellingApp");
         primaryStage.initStyle(StageStyle.DECORATED);

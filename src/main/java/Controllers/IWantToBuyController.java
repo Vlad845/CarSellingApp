@@ -1,8 +1,11 @@
 package Controllers;
 
+import exceptions.CouldNotWriteAnnouncementException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import services.AnnouncementService;
+import services.BuyedService;
 
 public class IWantToBuyController {
 
@@ -29,6 +32,13 @@ public class IWantToBuyController {
 
     @FXML
     void BuyButtonAction() {
+
+            try {
+                BuyedService.addAnnouncement(BrandLabel.getText(), ColorLable.getText(), EngineLabel.getText(),MilleageLable.getText(),EngineLabel.getText(), YearLable.getText(),PhoneLable.getText());
+                //registrationMessage.setText("Account created successfully!");
+            } catch (CouldNotWriteAnnouncementException e) {
+                //registrationMessage.setText(e.getMessage());
+            }
 
     }
 

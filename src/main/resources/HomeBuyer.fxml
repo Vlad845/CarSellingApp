@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HomeBuyerController">
-   <right>
-      <TextArea prefHeight="400.0" prefWidth="182.0" promptText="This company was founded int the begining of 2020 by fabi and vlad" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER" />
-   </right>
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="209.0" fitWidth="290.0" layoutX="64.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="209.0" fitWidth="290.0" layoutX="21.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@carfast.jpg" />
                </image>
             </ImageView>
+            <TextFlow layoutX="352.0" layoutY="23.0" prefHeight="277.0" prefWidth="234.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This company was founded int the begining of 2020 by fabi and vlad" wrappingWidth="210.39697265625">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
          </children>
       </AnchorPane>
    </center>
