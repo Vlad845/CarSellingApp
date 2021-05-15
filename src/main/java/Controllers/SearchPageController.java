@@ -46,16 +46,13 @@ public class SearchPageController {
 
         for (Announcement x : AnnouncementService.announcements) {
 
-            if (x.getColor().contains(SearchBarButton.getText())) {
+            if (x.getColor().equals(SearchBarButton.getText()) || x.getBrand().equals(SearchBarButton.getText()) ||  x.getDetails().equals(SearchBarButton.getText()) || x.getEmail().equals(SearchBarButton.getText()) || x.getEngine().equals(SearchBarButton.getText()) || x.getHorsePower().equals(SearchBarButton.getText()) || x.getMileage().equals(SearchBarButton.getText()) || x.getYearOfFabrication().equals(SearchBarButton.getText()) || x.getEmail().equals(SearchBarButton.getText())) {
 
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/IWantToBuy.fxml"));
 
 
-
-
                 try {
-
 
 
                     BorderPane pane = fxmlLoader.load();
