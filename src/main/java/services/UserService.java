@@ -66,11 +66,13 @@ public class UserService {
             throw new CouldNotWriteUsersException();
         }
     }
+
     public static String checkOwnerOrClient(String username,String password){
 
         String encodedPass = encodePassword(username,password);
         for(User user : users){
             if (username.equals(user.getUsername()) && encodedPass.equals(user.getPassword())){
+
                 return user.getRole();
 
             }

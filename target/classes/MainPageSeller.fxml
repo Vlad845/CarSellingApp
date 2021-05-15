@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox styleClass="bodybg" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainPageSellerController">
+   <children>
+      <HBox>
+         <children>
+            <BorderPane fx:id="MainPagePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="864.0">
+               <top>
+                  <AnchorPane prefHeight="280.0" prefWidth="864.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="homeButtonSeller" layoutX="56.0" layoutY="23.0" mnemonicParsing="false" onAction="#homeButtonSellerAction" prefHeight="125.0" prefWidth="264.0" style="-fx-background-color: #0598ff;" text="Home" textFill="#f8f8f8">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="createPost" layoutX="575.0" layoutY="24.0" mnemonicParsing="false" onAction="#createPostAction" prefHeight="121.0" prefWidth="245.0" style="-fx-background-color: #0598ff;" text="Create Post" textFill="#f5f5f5">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <bottom>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="View" layoutX="58.0" layoutY="38.0" mnemonicParsing="false" onAction="#ViewAction" prefHeight="125.0" prefWidth="264.0" style="-fx-background-color: #0598ff;" text="View My Posts" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </bottom>
+            </BorderPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>
