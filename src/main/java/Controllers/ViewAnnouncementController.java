@@ -80,10 +80,10 @@ public class ViewAnnouncementController {
 
         VboxView.getChildren().clear();
 
-
+        System.out.println(LogInController.getUsername());
         for (Announcement x : AnnouncementService.announcements) {
 
-            if (x.getUser().equals(LogInController.getUsername())) {
+            if ((LogInController.getUsername()!=null)&&(x.getUser().equals(LogInController.getUsername()))) {
 
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/View.fxml"));
