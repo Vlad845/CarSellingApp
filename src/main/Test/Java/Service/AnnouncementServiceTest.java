@@ -17,14 +17,14 @@ class AnnouncementServiceTest {
     public void testLoadUsersFromFile() throws Exception {
         AnnouncementService.loadAnnouncementsFromFile();
         assertNotNull(AnnouncementService.announcements);
-        assertEquals(9, AnnouncementService.announcements.size());
+        assertEquals(14, AnnouncementService.announcements.size());
     }
     @Test
     public void addAnnouncement() throws Exception {
         AnnouncementService.loadAnnouncementsFromFile();
         AnnouncementService.addAnnouncement("test", "testPass", "432","432","432","432","432","432","432","432");
         assertNotNull(AnnouncementService.announcements);
-        assertEquals(9, AnnouncementService.announcements.size());
+        assertEquals(14, AnnouncementService.announcements.size());
     }
 //    @Test
 //    public void testAddOneUserIsPersisted() throws Exception {
