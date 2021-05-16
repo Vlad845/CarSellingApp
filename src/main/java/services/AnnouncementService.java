@@ -21,7 +21,12 @@ import java.util.Objects;
 public class AnnouncementService {
 
     public static List<Announcement> announcements;
-    private static final Path ANNOUNCEMENTS_PATH = FileSystemService.getPathToFile("config", "announcement.json");
+    public static final Path ANNOUNCEMENTS_PATH = FileSystemService.getPathToFile("config", "announcement.json");
+
+
+    public static List<Announcement> getAnnouncements() {
+        return announcements;
+    }
 
     public static void loadAnnouncementsFromFile() throws IOException {
 
