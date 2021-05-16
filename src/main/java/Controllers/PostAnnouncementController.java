@@ -153,8 +153,9 @@ public class PostAnnouncementController {
 
     public void PostButtonAction(javafx.event.ActionEvent actionEvent) {
 
+        String user=LogInController.getUsername();
         try {
-            AnnouncementService.addAnnouncement(BrandTxt.getText(), ColorTxt.getText(), EngineTxt.getText(),MileageTxt.getText(),HorsePowerTxt.getText(),
+            AnnouncementService.addAnnouncement(user,BrandTxt.getText(), ColorTxt.getText(), EngineTxt.getText(),MileageTxt.getText(),HorsePowerTxt.getText(),
                     YearOfFabricationTxt.getText(),ExtraDetailsTxt.getText(),MobilePhoneTxt.getText(),EmailTxt.getText());
             //registrationMessage.setText("Account created successfully!");
         } catch (CouldNotWriteAnnouncementException e) {

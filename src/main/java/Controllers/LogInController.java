@@ -16,6 +16,9 @@ import javafx.stage.Stage;
 import services.UserService;
 
 public class LogInController implements Initializable {
+
+    private static String user;
+
     @FXML
     private Button loginbutton;
     @FXML
@@ -36,6 +39,7 @@ public class LogInController implements Initializable {
 
         if(UserService.check(logintext.getText(), passwordtext.getText()))
         {
+            user=logintext.getText();
             FXMLLoader fxmlLoader1 = new FXMLLoader();
             String role=UserService.checkOwnerOrClient(logintext.getText(),passwordtext.getText());
             if(role.equals("Buyer")) {
@@ -79,4 +83,8 @@ public class LogInController implements Initializable {
     {
 
     }
+
+     public static String getUsername(){
+        return user;
+     }
 }

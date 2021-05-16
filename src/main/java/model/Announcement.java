@@ -2,6 +2,7 @@ package model;
 
 public class Announcement {
 
+    private String User;
     private String Brand;
     private String Color;
     private String Engine;
@@ -16,7 +17,8 @@ public class Announcement {
 
     }
 
-    public Announcement(String b, String c, String e, String m, String hp, String yf, String d,String p, String em){
+    public Announcement(String u,String b, String c, String e, String m, String hp, String yf, String d,String p, String em){
+        this.User=u;
         this.Brand=b;
         this.Color=c;
         this.Engine=e;
@@ -99,5 +101,13 @@ public class Announcement {
 
     public void setEmail(String email) {
         Email = email;
+    }
+
+    public String getUser() {
+        return User;
+    }
+
+    public void setUser(String user) {
+        User = user;
     }
 }
