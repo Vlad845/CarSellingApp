@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import model.Announcement;
+import model.User;
 import services.AnnouncementService;
 
 
@@ -79,9 +80,10 @@ public class ViewAnnouncementController {
 
         VboxView.getChildren().clear();
 
+        System.out.println(LogInController.getUsername());
         for (Announcement x : AnnouncementService.announcements) {
 
-
+            if ((LogInController.getUsername()!=null)&&(x.getUser().equals(LogInController.getUsername()))) {
 
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/View.fxml"));
@@ -92,10 +94,9 @@ public class ViewAnnouncementController {
 
                     AnchorPane pane = fxmlLoader.load();
                     ViewController ap = fxmlLoader.getController();
-                    ap.set(x.getBrand(), x.getColor(), x.getEngine(), x.getYearOfFabrication(),x.getMileage(), x.getHorsePower());
+                    ap.set(x.getBrand(), x.getColor(), x.getEngine(), x.getYearOfFabrication(), x.getMileage(), x.getHorsePower());
 
                     VboxView.getChildren().add(pane);
-
 
 
                 } catch (IOException e) {
@@ -103,8 +104,7 @@ public class ViewAnnouncementController {
                 }
 
 
-
-
+            }
         }
     }
 

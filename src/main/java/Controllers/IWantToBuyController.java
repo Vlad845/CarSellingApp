@@ -9,6 +9,8 @@ import services.BuyedService;
 
 public class IWantToBuyController {
 
+    private String user;
+
     @FXML
     private Button BuyButton;
 
@@ -33,8 +35,9 @@ public class IWantToBuyController {
     @FXML
     void BuyButtonAction() {
 
+            user=LogInController.getUsername();
             try {
-                BuyedService.addAnnouncement(BrandLabel.getText(), ColorLable.getText(), EngineLabel.getText(),MilleageLable.getText(),EngineLabel.getText(), YearLable.getText(),PhoneLable.getText());
+                BuyedService.addAnnouncement(user,BrandLabel.getText(), ColorLable.getText(), EngineLabel.getText(),MilleageLable.getText(),EngineLabel.getText(), YearLable.getText(),PhoneLable.getText());
                 //registrationMessage.setText("Account created successfully!");
             } catch (CouldNotWriteAnnouncementException e) {
                 //registrationMessage.setText(e.getMessage());

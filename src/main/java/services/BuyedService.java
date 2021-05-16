@@ -36,9 +36,9 @@ public class BuyedService {
 
     }
 
-    public static void addAnnouncement(String b, String c, String e,String m,String hp, String yf,String w)  {
+    public static void addAnnouncement(String u,String b, String c, String e,String m,String hp, String yf,String w)  {
 
-        announcements.add(new Announcement(b, c, e,m,hp,yf,w,hp,hp));
+        announcements.add(new Announcement(u,b, c, e,m,hp,yf,w,hp,hp));
         persistAnnouncement();
     }
 
@@ -51,3 +51,5 @@ public class BuyedService {
         }
     }
 }
+
+
